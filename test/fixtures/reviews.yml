@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_excursion_id: 1
+  host_rating: 1.5
+  host_review: MyText
+  excursion_rating: 1.5
+  excursion_review: MyText
+
+two:
+  user_excursion_id: 1
+  host_rating: 1.5
+  host_review: MyText
+  excursion_rating: 1.5
+  excursion_review: MyText

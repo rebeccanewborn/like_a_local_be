@@ -1,0 +1,2 @@
+class UserExcursion < ApplicationRecord
+end

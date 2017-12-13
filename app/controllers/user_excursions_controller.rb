@@ -1,0 +1,2 @@
+class UserExcursionsController < ApplicationController
+end
