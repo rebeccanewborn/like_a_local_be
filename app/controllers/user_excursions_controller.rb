@@ -1,2 +1,0 @@
-class UserExcursionsController < ApplicationController
-end

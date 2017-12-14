@@ -1,2 +1,0 @@
-class ExcursionsController < ApplicationController
-end
