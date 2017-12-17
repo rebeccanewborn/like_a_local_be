@@ -8,4 +8,15 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
+  def show
+    token = request.headers['token']
+    decoded = JWT.decode(token, ENV['secret'], true, { algorithm: ENV['algo'] })
+    @user = User.find_by(email: decoded[0]['email'])
+    if @user
+      render json: @user
+    else
+      render json: {error: 'No id present on headers'}, status: 404
+    end
+  end
+
 end
