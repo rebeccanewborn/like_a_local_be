@@ -9,8 +9,16 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def update
+    @excursion = Excursion.find_by(id: params[:excursion_id])
+    @user = User.find_by(id: params[:id])
+    @user.excursions << @excursion
+    render json: @excursion
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :bio, :email, :password)
   end
+
 end

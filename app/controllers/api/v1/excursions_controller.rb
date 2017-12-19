@@ -19,8 +19,15 @@ class Api::V1::ExcursionsController < ApplicationController
 
   end
 
+  def destroy
+    @excursion = Excursion.find_by(id: params[:id])
+    @excursion.destroy
+    @cities = City.all
+    render json: @cities
+  end
+
   private
   def excursion_params
-    params.require(:excursion).permit(:title, :description, :duration, :price, :city_id)
+    params.require(:excursion).permit(:title, :description, :duration, :price, :city_id, :host_id)
   end
 end

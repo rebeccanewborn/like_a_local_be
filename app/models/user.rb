@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :user_excursions
   has_many :excursions, through: :user_excursions
+  has_many :hosted_excursions, class_name: "Excursion", foreign_key: :host_id
 
   validates :email, presence: true, uniqueness: true
   validate :valid_email_address
