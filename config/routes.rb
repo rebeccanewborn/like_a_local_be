@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   namespace :api do
     namespace :v1 do
       post 'login' => 'auth#create'
       get 'login' => 'auth#show'
+      resources :excursion_occurrences
       resources :reviews
       resources :cities
       resources :excursions

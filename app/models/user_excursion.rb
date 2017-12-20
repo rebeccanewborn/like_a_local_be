@@ -1,4 +1,4 @@
 class UserExcursion < ApplicationRecord
   belongs_to :user
-  belongs_to :excursion
+  belongs_to :excursion_occurrence
 end
