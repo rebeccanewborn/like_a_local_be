@@ -1,9 +1,7 @@
 class Excursion < ApplicationRecord
   belongs_to :city
   belongs_to :host, class_name: "User"
-  has_many :excursion_occurrences
-  # has_many :user_excursions
-  # has_many :users, through: :user_excursions
+  has_many :excursion_occurrences, dependent: :destroy
 
   def city_name
     self.city.name
