@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :cities
       resources :excursions
       resources :user_excursions
+      delete 'dropout' => 'user_excursions#destroy'
       resources :users
     end
   end
