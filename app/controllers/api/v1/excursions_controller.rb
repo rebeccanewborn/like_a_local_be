@@ -28,6 +28,6 @@ class Api::V1::ExcursionsController < ApplicationController
 
   private
   def excursion_params
-    params.require(:excursion).permit(:title, :description, :duration, :price, :city_id, :host_id)
+    params.require(:excursion).permit(:title, :description, :duration, :price, :city_id, :host_id, :lat, :lng, :address)
   end
 end
