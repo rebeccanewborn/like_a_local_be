@@ -1,5 +1,6 @@
 class Api::V1::ExcursionsController < ApplicationController
   def create
+    binding.pry
     @excursion = Excursion.new(excursion_params)
     if @excursion.valid?
       @excursion.save

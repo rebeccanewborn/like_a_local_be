@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: rebeccanewborn
+  api_key: '591886981447613'
+  api_secret: CJV81h5ainF-ZGmFG4ubH4qiHG4
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: rebeccanewborn
+  api_key: '591886981447613'
+  api_secret: CJV81h5ainF-ZGmFG4ubH4qiHG4
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: rebeccanewborn
+  api_key: '591886981447613'
+  api_secret: CJV81h5ainF-ZGmFG4ubH4qiHG4
+  enhance_image_tag: true
+  static_image_support: false

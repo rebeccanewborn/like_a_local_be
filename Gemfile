@@ -25,6 +25,10 @@ gem 'pry'
 gem 'knock'
 gem 'figaro'
 gem 'jwt'
+gem "paperclip", "~> 5.0.0"
+gem 'cloudinary'
+gem 'attachinary'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

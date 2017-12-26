@@ -2,6 +2,7 @@ class Excursion < ApplicationRecord
   belongs_to :city
   belongs_to :host, class_name: "User"
   has_many :excursion_occurrences, dependent: :destroy
+  has_many :uploads
 
   def city_name
     self.city.name
