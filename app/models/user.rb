@@ -5,7 +5,15 @@ class User < ApplicationRecord
   has_many :hosted_excursions, class_name: "Excursion", foreign_key: :host_id
   has_attached_file :avatar,
     :path => ':id/:style/:filename',
-    :storage => :cloudinary
+    :storage => :cloudinary,
+    :cloudinary_upload_options => {
+        :default => {
+            :tags => [ 'Avatar' ],
+            :transformation => [
+                { :crop => 'thumb', :gravity => 'face' }
+            ]
+        }
+    }
 
   validates :email, presence: true, uniqueness: true
   validate :valid_email_address
