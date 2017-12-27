@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
     @user.avatar = avatar_base64
     if @user.valid?
       @user.save
-      render json: {jwt: @user.token, user: @user}
+      render json: {jwt: @user.token, user: UserSerializer.new(@user)}
     else
       render json: {error: @user.errors}, status: 400
     end
