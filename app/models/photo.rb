@@ -6,4 +6,8 @@ class Photo < ApplicationRecord
     :storage => :cloudinary
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+  def user_name
+    self.user.name
+  end
 end

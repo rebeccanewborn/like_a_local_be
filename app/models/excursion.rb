@@ -11,4 +11,12 @@ class Excursion < ApplicationRecord
   def host_name
     self.host.name
   end
+
+  def host_photos
+    self.photos.select { |photo| photo.user_id == self.host_id }
+  end
+
+  def user_photos
+    self.photos.select { |photo| photo.user_id != self.host_id }
+  end
 end
