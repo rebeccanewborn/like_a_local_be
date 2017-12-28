@@ -1,9 +1,13 @@
 class Api::V1::ExcursionsController < ApplicationController
   def create
-    binding.pry
     @excursion = Excursion.new(excursion_params)
+    avatar_base64s = params[:avatar_base64s]
     if @excursion.valid?
       @excursion.save
+      photos = avatar_base64s.map { |base64| Photo.create(image: base64, user_id: params[:host_id], excursion_id: @excursion.id) }
+      @excursion.photos = photos
+      @excursion.save
+      binding.pry
       render json: @excursion
     else
       render json: {error: @excursion.errors}, status: 400
