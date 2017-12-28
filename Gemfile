@@ -27,7 +27,8 @@ gem 'figaro'
 gem 'jwt'
 gem "paperclip", "~> 5.0.0"
 gem 'cloudinary'
-gem 'attachinary'
+gem 'paperclip-cloudinary'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
