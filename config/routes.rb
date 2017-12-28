@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount Attachinary::Engine => "/attachinary"
 
   namespace :api do
     namespace :v1 do
