@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'login' => 'auth#create'
       get 'login' => 'auth#show'
+      post 'photos' => 'photos#create_multiple'
       resources :excursion_occurrences
       resources :reviews
       resources :cities
