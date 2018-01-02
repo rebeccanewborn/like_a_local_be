@@ -3,4 +3,5 @@ class ExcursionSerializer < ActiveModel::Serializer
   has_many :excursion_occurrences, serializer: ExcursionOccurrenceSerializer
   has_many :host_photos, serializer: PhotoSerializer
   has_many :user_photos, serializer: PhotoSerializer
+  has_many :reviews, serializer: ReviewSerializer
 end
