@@ -13,6 +13,11 @@ class Excursion < ApplicationRecord
     self.host.name
   end
 
+  def first_photo
+    photo = self.photos.find { |photo| photo.user_id == self.host_id}
+    photo.image
+  end
+
   def host_photos
     self.photos.select { |photo| photo.user_id == self.host_id }
   end
