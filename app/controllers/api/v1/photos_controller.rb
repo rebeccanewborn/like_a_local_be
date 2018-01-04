@@ -5,6 +5,11 @@ class Api::V1::PhotosController < ApplicationController
     render json: @excursion
   end
 
+  def show
+    @photo = Photo.find(params[:id])
+    render json: @photo
+  end
+
   private
   def photos_params
     params.permit(:photos, :excursion_id, :user_id)

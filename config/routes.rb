@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post 'login' => 'auth#create'
       get 'login' => 'auth#show'
       post 'photos' => 'photos#create_multiple'
+      get 'photos/:id' => 'photos#show'
       resources :excursion_occurrences
       resources :reviews
       resources :cities
