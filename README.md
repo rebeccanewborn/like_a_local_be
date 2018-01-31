@@ -1,24 +1,42 @@
-# README
+# Like a Local
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+JSON API to support Like a Local, a single page web application in which users can host or attend guided excursions. Avoid the tourist traps of a city, and see hidden gems through the eyes of a local.
+[Demo](https://drive.google.com/open?id=1AI9Nte2DoOLTmkx8f8WveqwujCEAgRGr)
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Copy the link of repository upper right of this page (clone or download).
 
-* System dependencies
+```
+git clone git@github.com:rebeccanewborn/like_a_local_be.git
+```
 
-* Configuration
+Change into the like_a_local_be directory
 
-* Database creation
+```
+cd like_a_local_be
+```
 
-* Database initialization
+Once you have gone into the folder for the Like a Local backend, the following will download the necessary dependencies for the application to run.
+**Be sure to run this rails server first, and on port 3000**
 
-* How to run the test suite
+```
+bundle install
+rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
 
-* Deployment instructions
+* Ruby on Rails
+* ActiveRecord, including Serializers
+* Bcrypt/JWT
+* Paperclip
+* Cloudinary
 
-* ...
+## Author
+
+* **Rebecca Newborn** - [Github](https://github.com/rebeccanewborn)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
